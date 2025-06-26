@@ -8,6 +8,7 @@
         "type_traits": "cpp",
         "iostream": "cpp",
         "vector": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "ostream": "cpp"
     }
 }
