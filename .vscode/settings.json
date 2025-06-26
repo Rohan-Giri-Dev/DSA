@@ -1,6 +1,13 @@
 {
     "files.associations": {
         "*.json": "json",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "map": "cpp"
     }
 }
