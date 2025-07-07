@@ -7,7 +7,7 @@ using namespace std;
 void sLargest(vector<int> arr)
 {
     int largest = arr[0];
-    int sLargest = -1;
+    int sLargest = INT_MIN;
     for(int i =1; i<arr.size(); i++)
     {
         if(arr[i] > largest)
@@ -27,14 +27,11 @@ void sLargest(vector<int> arr)
     cout<<"Largest element is: "<<largest<<endl;
     cout<<"Second Largest element is: "<<sLargest;
 
-
 }
 
 int main()
 {
     vector<int> arr = {8,1,7,7,5,2,3};
     sLargest(arr);
-    
-
     
 }
