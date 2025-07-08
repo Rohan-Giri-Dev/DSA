@@ -6,6 +6,7 @@ using namespace std;
 void arrRotate(vector<int> &arr,int d)
 {
     int n = arr.size();
+    d= d%n;
     vector<int> temp;
     for(int i =0 ; i<d; i++)
     {
