@@ -1,47 +1,41 @@
-//Moving all the zero to the right side of the array . Optimal solution
 #include <iostream>
 #include <vector>
 using namespace std;
 
 void printArr(vector<int> &arr)
 {
-    for(auto i = arr.begin() ; i != arr.end(); i++)
+    for (auto i : arr)
     {
-        cout<<*i<<" ";
+        cout << i << " ";
     }
+    cout << endl;
 }
+
 void moveArr(vector<int> &arr)
 {
     int n = arr.size();
-    int j = -1;
-    
-    for(int i=0; i<n; i++)
-    {
-        if(arr[i] == 0)
-        {
-            j=i;
-        }
-        break;
-    }
+    int j = 0; // index for placing non-zero elements
 
-    for(int i=j+1; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(arr[i] != 0)
+        if (arr[i] != 0)
         {
-            swap(arr[i],arr[j]);
+            swap(arr[i], arr[j]);
             j++;
         }
     }
-
-
 }
 
 int main()
 {
-    vector<int> arr = {1,0,2,0,0,3,4,5,0,6};
-    printArr(arr);
-    cout<<endl;
-    moveArr(arr);
+    vector<int> arr = {1, 0, 2, 0, 0, 3, 4, 5, 0, 6};
+    cout << "Before: ";
     printArr(arr);
 
+    moveArr(arr);
+
+    cout << "After: ";
+    printArr(arr);
+
+    return 0;
 }
