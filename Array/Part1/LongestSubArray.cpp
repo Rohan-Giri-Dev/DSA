@@ -7,20 +7,24 @@ vector<int> longestSubarray(vector<int> &arr, int k)
 {
     int n = arr.size();
     vector<int> temp;
-
-    int sum = 0;
+    int len = 0;
 
     for(int i=0; i<n; i++)
     {
-        for(int j=0; j<k; j++)
+        int sum = 0;
+        for(int j=i; j<n; j++)
         {
             sum += arr[j];
-            temp.push_back(arr[j]);
-            if(sum == k && temp.size() == k)
-            {
-                return temp;
-            }
-            else return temp = {0};
+           if (sum == k && (j - i + 1) > len) {
+            len = j - i + 1;  // Update length
+
+            temp.clear(); // Clear previous subarray
+
+        for (int p = i; p <= j; p++) {
+        temp.push_back(arr[p]);
+    }
+    }
+
         }
     }
 
