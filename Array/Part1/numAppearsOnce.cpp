@@ -8,24 +8,39 @@
 
 using namespace std;
 
+// Sustinable approach
+// int singleNumber(vector<int>& arr) {
+//     int n = arr.size();
+//     map<int,int> mpp;
+
+//     for(int i=0; i<n; i++)
+//     {
+//         mpp[arr[i]]++;
+//     }
+
+//     for(auto it: mpp)
+//     {
+//         if(it.second == 1)
+//         {
+//             return it.first;
+//         }
+//     }
+
+//     return 0;
+// }
+
+
+// Optimal approach with XOR
 int singleNumber(vector<int>& arr) {
     int n = arr.size();
-    map<int,int> mpp;
+    int XOR = 0;
 
     for(int i=0; i<n; i++)
     {
-        mpp[arr[i]]++;
+        XOR = XOR ^ arr[i];
     }
 
-    for(auto it: mpp)
-    {
-        if(it.second == 1)
-        {
-            return it.first;
-        }
-    }
-
-    return 0;
+    return XOR;
         
 }
 
