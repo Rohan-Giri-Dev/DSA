@@ -34,9 +34,15 @@ vector<int> longestSubarray(vector<int> &arr, int k)
 int main()
 {
     vector<int> arr = {1,2,3,1,1,1,1,4,2,3};
+    vector<int> arr1 = {1,2,3,1,1,1,1,4,2,3};
     vector<int> res = longestSubarray(arr,3);
+    vector<int> res1 = longestSubarray(arr,3);
 
     for(auto it: res)
+    {
+        cout<<it<<" ";
+    }
+    for(auto it: res1)
     {
         cout<<it<<" ";
     }
