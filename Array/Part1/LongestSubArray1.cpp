@@ -1,4 +1,4 @@
-// Longest Subarray with given Sum K(Positives)
+// Longest Subarray with given Sum K(Positives) optimial solution
 #include <iostream>
 #include <vector>
 using namespace std;
