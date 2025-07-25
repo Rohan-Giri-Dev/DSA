@@ -19,15 +19,16 @@ vector<int> rearrangeArray(vector<int>& arr) {
             ne.push_back(arr[i]);
         }
     }
+    int pos =0 , neg = 0;
 
     for(int i=0; i<n; i++)
     {
         if( i%2 == 0)
         {
-            temp.push_back(ps[i]);
+            temp.push_back(ps[pos++]);
         }
         else{
-            temp.push_back(ne[i]);
+            temp.push_back(ne[neg++]);
         }
     }
 
@@ -42,6 +43,6 @@ int main()
 
     for(auto it: res)
     {
-        cout<<it;
+        cout<<it<<" ";
     }
 }
