@@ -25,7 +25,7 @@ int main(){
 
     Solution s1;
     vector<int> a = {100, 200, 1, 2, 3, 4};
-    vector<int> a1 = {0,3,7,2,5,8,4,6,0,1};
+    vector<int> a1 = {1,0,1,2};
 
     int ans = s1.longestConsecutive(a);
     int ans1 = s1.longestConsecutive(a1);
