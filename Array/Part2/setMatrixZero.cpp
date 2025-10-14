@@ -14,16 +14,16 @@ public:
         for(int i=0; i<row; i++){
             for(int j=0; j<col; j++){
                 if(matrix[i][j] == 0){
-                    rowMat[i] == 1;
-                    colMat[j] == 1;
+                    rowMat[i] = 1;
+                    colMat[j] = 1;
                 }
             }
         }
 
         for(int i=0; i<row; i++){
             for(int j=0; j<col; j++){
-                if(rowMat[i] == 1 || colMat[j] == 1){
-                    matrix[i][j] == 0;
+                if(rowMat[i] || colMat[j] ){
+                    matrix[i][j] = 0;
                 }
             }
         }
@@ -39,12 +39,11 @@ int main(){
     {1,3,1,5}};
 
     Solution s1;
-
     s1.setZeroes(matrix);
 
     for(auto &row : matrix){
         for(auto col : row){
-            cout<<col;
+            cout<<col<<" ";
         }
         cout<<endl;
     }
