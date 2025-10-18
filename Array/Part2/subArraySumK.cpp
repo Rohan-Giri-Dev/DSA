@@ -1,26 +1,21 @@
 #include <iostream>
+#include <map>
 #include <vector>
 using namespace std;
 
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        int count = 0;
+        map<int,int> mpp;
+        mpp[0] = 1;
+        int preSum = 0 , count = 0;
 
-        int n = nums.size();
-
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-                int sum = 0;
-
-                for(int K=i; K<=j; K++){
-                    sum += nums[K];
-                }
-
-                if(sum == k) count++;
-            }
+        for(int i=0; i<nums.size(); i++){
+            preSum += nums[i];
+            int remove = preSum -k;
+            count += mpp[remove];
+            mpp[preSum] +=1;
         }
-
         return count;
     }
 };
