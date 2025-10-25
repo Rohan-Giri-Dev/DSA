@@ -16,11 +16,8 @@ public:
         }
 
         for(auto it: mp){
-            if(it.second() > n){
-                ans.push_back(it.first());
-            }
-            else{
-                return nums;
+            if(it.second > n){
+                ans.push_back(it.first);
             }
         }
         return ans;
@@ -28,7 +25,7 @@ public:
 };
 
 int main(){
-    vector<int> arr = {1,2,2,2,1,1,1};
+    vector<int> arr = {1,2,2,2,1};
     Solution s1 ;
     vector<int> ans = s1.majorityElement(arr);
 
