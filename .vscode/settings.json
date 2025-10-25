@@ -10,6 +10,8 @@
         "vector": "cpp",
         "map": "cpp",
         "ostream": "cpp",
-        "format": "cpp"
-    }
+        "format": "cpp",
+        "utility": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
