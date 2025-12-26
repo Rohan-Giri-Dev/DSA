@@ -35,7 +35,7 @@ int main()
 }
 
 /*
-Brute force 
+Brute force
 int subarraysWithXorK(vector<int> a, int k){
     int n = a.size();
     int count = 0;

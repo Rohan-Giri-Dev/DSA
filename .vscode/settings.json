@@ -11,7 +11,8 @@
         "map": "cpp",
         "ostream": "cpp",
         "format": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "xtree": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
