@@ -7,7 +7,49 @@ using namespace std;
 void solution(vector<int> arr,int &secondMin, int &secondMax)
 {
     int n = arr.size();
-    // smallest so far
+
+    long long mn = LLONG_MAX;
+    long long smn = LLONG_MAX;
+
+    long long mx = LLONG_MIN;
+    long long smx = LLONG_MIN;
+
+    for(int x : arr)
+    {
+        if( x < mn){
+            smn = mn;
+            mn = x;
+        }
+        else if( x != mn && x < smn){
+            smn = x;
+        }
+
+        if( x > mx){
+            smx = mx;
+            mx = x;
+        }
+        else if( x != mx && x > smx){
+            smx = x;
+        }
+    }
+    if( smn == LLONG_MAX || smx == LLONG_MIN) return;
+
+    secondMin = int(smn);
+    secondMax = int(smx);
+    cout<<"Second minimum: "<< secondMin<<endl;
+    cout<<"Second maximum: "<< secondMax;
+
+}
+
+int main(){
+    // vector<int> arr = {1, 2, 4, 7, 7, 5};
+    vector<int> arr = {1, 2, 4, 7, 7, 5,  6,-1, 0};
+    int secondSmallest, secondLargest;
+    solution(arr, secondSmallest, secondLargest);
+}
+
+/*OPTIMAL APPROACH
+   // smallest so far
     long long mn = INT_MAX;
     long long smn = INT_MAX;
 
@@ -44,14 +86,7 @@ void solution(vector<int> arr,int &secondMin, int &secondMax)
         secondMax = int(smx);
     }
     cout<<"Second smallest: "<<smn<<endl;
-    cout<<"Second largest: "<<smx;
-}
-
-int main(){
-    vector<int> arr = {1, 2, 4, 7, 7, 5};
-    int secondSmallest, secondLargest;
-    solution(arr, secondSmallest, secondLargest);
-}
+    cout<<"Second largest: "<<smx;*/
 
 
 /* int n = arr.size();
