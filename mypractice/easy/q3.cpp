@@ -1,38 +1,26 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
+// leet code 1752 
 class Solution
 {
 public:
     bool check(vector<int> &nums)
     {
         int n = nums.size();
-        
+        int count = 0;
 
-        // vector<int> sortArr = nums;
-        // sort(sortArr.begin(), sortArr.end()); // this will store the sorted array
-        vector<int>v;
-        int ind = -1;
-        for(int i=0; i<= n-2; i++){
-            if(nums[i] > nums[i+1]){
-                ind = i;
-                v.insert(v.begin(),nums.begin()+ind+1,nums.end());
-                reverse(v.begin(), v.end());
-                v.insert(v.end(),nums.begin(),nums.begin()+ind+1);
-                break;
+        for (int i = 0; i < n; i++)
+        {
+            if (nums[i] > nums[(i + 1) % n])
+            {
+                count++;
+                if (count > 1)
+                    return false; // early exit
             }
         }
-
-        for(int i=0 ; i<=v.size()-2; i++){
-            if(v[i] > v[i+1]){
-                cout<<"Not sorted";
-                return false;
-            }
-        }
-
-        return true;
+        return true; // count can be 0 or 1
     }
 };
 
@@ -42,5 +30,5 @@ int main()
     // 1 2 3 4 5 9 6
     // vector<int> arr1 = {5, 6, 7, 8, 4, 3, 2, 1};
     Solution s1;
-    cout<<s1.check(arr);
+    cout << s1.check(arr);
 }
