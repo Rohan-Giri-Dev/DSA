@@ -9,9 +9,9 @@ vector<int> twoSum(vector<int> &arr, int k)
     vector<int> ans;
     map<int, int> mpp;
 
-    for(int i=0; i <n ; i++){
-        int a = arr[i]; // store the current value
-        int more = k-a; // more needed for the sum
+    for(int i=0; i<n; i++){
+        int a = arr[i];
+        int more = k - a;
 
         if(mpp.find(more) != mpp.end()){
             ans.push_back(i);
