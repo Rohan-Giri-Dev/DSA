@@ -1,0 +1,20 @@
+# Ignore compiled C++ executable files
+*.exe
+
+# Optional: common C++ build outputs
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+
+# CMake build folders
+build/
+cmake-build-*/
+
+# VS Code temporary files
+.vscode/
+
+# Debug files
+*.pdb
