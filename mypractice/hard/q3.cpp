@@ -49,7 +49,7 @@ vector<vector<int>> threeSum(vector<int> arr)
                 // To avoid dublicates and rechecking
 
                 while (l < r && arr[r] == arr[r + 1])
-                    r--;
+                    r--;  
                 while (l < r && arr[l] == arr[l - 1])
                     l++;
             }
