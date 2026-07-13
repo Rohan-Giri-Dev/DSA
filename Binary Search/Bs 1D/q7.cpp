@@ -21,7 +21,7 @@ public:
             if (arr[mid] == target)
                 return mid;
 
-            if (arr[l] < arr[mid])
+            if (arr[l] <= arr[mid])
             {
                 if (target >= arr[l] && target < arr[mid])
                 {
