@@ -27,7 +27,7 @@ long long sumAndMultiply(int n)
     if (s.empty())
         return 0;
 
-    reverse(s.begin(), s.end());
+    reverse(s.begin(), s.end()); //meow
 
     long long val = stoi(s);
 
