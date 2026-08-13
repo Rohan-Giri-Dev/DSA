@@ -40,3 +40,9 @@ public:
         return index;
     }
 };
+
+/*
+Started with the problem of compressing a string represented as a vector of characters. The goal is to modify the input vector in-place to represent the compressed version of the string and return the new length of the compressed string.
+The algorithm uses a two-pointer technique. The first pointer, `i`, iterates through the input vector, while the second pointer, `index`, keeps track of the position in the vector where the next character or count should be placed.
+For each unique character encountered, the algorithm counts its occurrences and updates the vector accordingly. If a character appears more than once, its count is converted to a string and added to the vector. Finally, the function returns the new length of the compressed string.
+*/
