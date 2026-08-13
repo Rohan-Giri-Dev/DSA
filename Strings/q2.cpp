@@ -8,23 +8,26 @@ class Solution
 public:
     bool checkIfPangram(string sentence)
     {
-        vector<int> arr(26, 0); // created an array of size 26 and assigning value to 0
+        // Store the frequency of each lowercase English letter ('a' to 'z').
+        vector<int> arr(26, 0);
 
         for (char &ch : sentence)
         {
-            int index = ch - 'a'; // as all are lowercase. So we can just find the index
-            arr[index]++;         // then do ++. To count
+            // Convert the character into its zero-based alphabet index.
+            int index = ch - 'a';
+            arr[index]++;
         }
 
         for (auto &cnt : arr)
         {
             if (cnt == 0)
             {
-                // if any char is not their then its index will be zero
+                // A zero frequency means that at least one letter is missing.
                 return false;
             }
         }
 
+        // Every letter appears at least once, so the sentence is a pangram.
         return true;
     }
 };
