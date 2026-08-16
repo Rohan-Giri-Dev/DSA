@@ -36,3 +36,7 @@ public:
         return res;
     }
 };
+
+/*
+learning for my exams
+*/
